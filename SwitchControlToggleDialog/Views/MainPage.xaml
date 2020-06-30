@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:prism="clr-namespace:Prism.Services.Dialogs.Xaml;assembly=Prism.Forms" 
+             xmlns:prism1="http://prismlibrary.com"
+             x:Class="SwitchControlToggleDialog.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Toggling the switch causes a null exception, clicking the button calls the same exact code but brings up a dialog." />
+        <Switch HorizontalOptions="EndAndExpand">
+            
+            <Switch.Behaviors>
+                <prism1:EventToCommandBehavior Command="{Binding  AllowUseToggledCommand}"
+                                                      EventName="Toggled"/>
+             </Switch.Behaviors>
+        </Switch>
+        <Button Command="{Binding AllowUseToggledCommand}"
+                        Text="Test AllowUseToggledCommand" />
+    </StackLayout>
+
+</ContentPage>

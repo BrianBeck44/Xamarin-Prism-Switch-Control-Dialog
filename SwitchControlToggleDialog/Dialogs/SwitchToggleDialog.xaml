@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:prism="http://prismlibrary.com"
+       prism:DialogLayout.RelativeWidthRequest="0.75"
+       x:Class="SwitchControlToggleDialog.Views.SwitchToggleDialog">
+
+        <StackLayout HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="10">
+            <Label FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               Text="{Binding Title}" />
+            <Label HorizontalOptions="StartAndExpand"
+               Text="{Binding Message}" />
+        <Button Command="{Binding CloseCommand}" 
+                Text="Close" />
+
+
+        </StackLayout>
+    
+</StackLayout>
